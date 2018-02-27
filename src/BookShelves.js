@@ -9,7 +9,7 @@ class BookShelves extends Component {
         return (
           <div className="list-books">
             <div className="list-books-title">
-              <h1>MyReads</h1>
+              <h1>Book Shelves</h1>
             </div>
             <BookShelf
                 books={books}
