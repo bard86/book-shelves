@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Book from './Book'
 import sortBy from 'sort-by'
+import PropTypes from 'prop-types'
 
 class Search extends Component {
     state = {
@@ -30,20 +31,25 @@ class Search extends Component {
                     </div>
                 </div>
                 <div className="search-books-results">
-                <ol className="books-grid">
-                    {searchResults.sort(sortBy('title')).map((book) => (
-                        <li key={book.id}>
-                            <Book
-                                book={book}
-                                updateBook={updateBook}
-                            />
-                        </li>
-                    ))}
-                </ol>
+                    <ol className="books-grid">
+                        {searchResults.sort(sortBy('title')).map((book) => (
+                            <li key={book.id}>
+                                <Book
+                                    book={book}
+                                    updateBook={updateBook}
+                                />
+                            </li>
+                        ))}
+                    </ol>
                 </div>
             </div>
         )
     }
+}
+
+Search.propTypes = {
+    searchResults: PropTypes.array.isRequired,
+    updateBook: PropTypes.func.isRequired
 }
 
 export default Search
