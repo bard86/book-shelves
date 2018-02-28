@@ -16,7 +16,6 @@ A basic React project which allows a user to search for a book and add to, move 
 | _Behavior_ | _Input_ | _Output_ |
 |:---------------------------------------------------------------------:|:---------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------:|
 | Find a book | Enter Keywords: Artificial Intelligence | Result: Books with "Artificial Intelligence" in title |
-| Add searched book to shelf | Enter Meal Details: The fajitas are chicken so they are lower in calories! | Result: Details: The fajitas are chicken so they are lower in calories! |
 | Add a book to shelves | Select Shelf: "Currently Reading" | Result: Book now on "Currently Reading" shelf |
 | Move book between shelves | Select Shelf: "Read" | Result: Book is now on "Read" shelf |
 
