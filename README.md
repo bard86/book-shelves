@@ -11,6 +11,10 @@
 
 A basic React project which allows a user to search for a book and add to, move between or remove books from a series of three shelves. The shelves are "Currently Reading", "Want To Read" and "Read" respectively.
 
+This is project created for Udacity's React Fundamentals Nanodegree course. This App is collecting and showing books that you want to read, are currently reading or have alread read. Also it provides a search functionality which allows to search books from a BooksAPI book library.
+
+This project were created based on provided starter template.
+
 ----
 ### **Specifications**
 | _Behavior_ | _Input_ | _Output_ |
