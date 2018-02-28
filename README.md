@@ -4,7 +4,7 @@
 #
 ##### By [Sam Peppard](https://github.com/sampeppard)
 #
-![screenshot of project main page](src/img/demo-screenshot.jpg)
+![screenshot of project main page](img/demo-screenshot.jpg)
 
 ----
 ### **Description**
