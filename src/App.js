@@ -30,21 +30,11 @@ class BooksApp extends Component {
         BooksAPI.search(query).then((books) => {
 
             if (books) {
-                if (!books.error) {
-                    // if there is no error, set the searchResults state to what is set in the books array
-                    this.setState({
-                        searchResults: books
-                    })
-                } else {
-                    this.setState({
-                        searchResults: []
-                    })
-                }
+                // if there is no error, set the searchResults state to what is set in the books array
+                !books.error ? this.setState({ searchResults: books }) : this.setState({ searchResults: [] })
             } else {
                 // this handles if the search does not return anything
-                this.setState({
-                    searchResults: []
-                })
+                this.setState({ searchResults: [] })
             }
         })
     };

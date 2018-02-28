@@ -17,6 +17,7 @@ class Search extends Component {
     
     render() {
         const { searchResults, updateBook } = this.props
+        const { queryState } = this.state
         return (
             <div className="search-books">
                 <div className="search-books-bar">
@@ -33,7 +34,7 @@ class Search extends Component {
                 </div>
                 <div className="search-books-results">
                     <ol className="books-grid">
-                        {searchResults.sort(sortBy('title')).map((book) => (
+                        {queryState !== '' && searchResults.sort(sortBy('title')).map((book) => (
                             <li key={book.id}>
                                 <Book
                                     book={book}

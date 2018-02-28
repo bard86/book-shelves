@@ -13,7 +13,7 @@ class BookShelf extends Component {
                     <h2 className="bookshelf-title">{category}</h2>
                     <div className="bookshelf-books">
                         <ol className="books-grid">
-                            {books.filter(book => book.shelf === status).sort(sortBy('title')).map((book) => (
+                            {books.filter((book) => book.shelf === status).sort(sortBy('title')).map((book) => (
                                 <li key={book.id}>
                                     <Book
                                         book={book}
