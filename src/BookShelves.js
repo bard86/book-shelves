@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import BookShelf from './BookShelf'
 
 class BookShelves extends Component {
-
+    // We have three instances of the BookShelf component all using a status prop to decide which shelf books will go on
     render() {
         const { books, updateBook } = this.props
         return (

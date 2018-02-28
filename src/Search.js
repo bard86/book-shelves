@@ -10,6 +10,7 @@ class Search extends Component {
     }
 
     updateQuery = (query) => {
+        // our argument, query will in this case be the value of the input element, which in turn will be set the state for the query property
         this.props.searchBooks(query)
         this.setState({ query })
     }

@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 
 class Book extends Component {
     render() {
+        // updateBook will take the argument of a book prop and the shelf parameter in this case will be the value of the input element
         const { book, updateBook } = this.props
+        // we have this to handle if there is no imageLinks property of book
         const thumbnail = book.imageLinks ? book.imageLinks.smallThumbnail : 'http://via.placeholder.com/128x193?text=No%20Cover'
         return (
             <div className="book">
