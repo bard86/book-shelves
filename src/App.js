@@ -8,8 +8,7 @@ import BookShelves from './BookShelves';
 class BooksApp extends Component {
     // we have two properties in state, books for the initial api call, and searchResults for filtered results
     state = {
-        books: [],
-        searchResults: []
+        books: []
     }
 
     componentDidMount() {
@@ -26,19 +25,6 @@ class BooksApp extends Component {
         })
     }
 
-    searchBooks = (query) => {
-        BooksAPI.search(query).then((books) => {
-
-            if (books) {
-                // if there is no error, set the searchResults state to what is set in the books array
-                !books.error ? this.setState({ searchResults: books }) : this.setState({ searchResults: [] })
-            } else {
-                // this handles if the search does not return anything
-                this.setState({ searchResults: [] })
-            }
-        })
-    };
-
     render() {
         const { books } = this.state
         return (
@@ -53,9 +39,9 @@ class BooksApp extends Component {
 
             <Route path="/search" render={() => (
                 <Search
-                    searchResults={this.state.searchResults}
                     searchBooks={this.searchBooks} 
                     updateBook={this.updateBook}
+                    books={books}
                 />
             )}/>
         </div>
