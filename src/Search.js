@@ -16,7 +16,8 @@ class Search extends Component {
         BooksAPI.search(query).then((searchResults) => {
 
             if (searchResults) {
-                // this is to make sure what is already on a shelf is has a proper default value when searched
+                // this is to make sure what is already on a shelf has a proper default value when searched
+                // the match is made via the title property and will return what is on a shelf or the search result
                 const getResults = searchResults.map((bookResult) => {
                     const shelfMatch = this.props.books.find((book) => book.title === bookResult.title)
                     return shelfMatch || bookResult
@@ -51,7 +52,7 @@ class Search extends Component {
                     <div className="search-books-input-wrapper">
                         <DebounceInput
                             minLength={1}
-                            debounceTimeout={1000}
+                            debounceTimeout={500}
                             placeholder="Search by title or author"
                             value={queryState}
                             onChange={(event) => this.updateQuery(event.target.value)}
